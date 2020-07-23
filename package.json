@@ -1,0 +1,32 @@
+{
+  "name": "qna-maker-batch-test",
+  "version": "1.0.0",
+  "description": "simple qna-maker-batch-test",
+  "main": "index.js",
+  "dependencies": {
+    "request": "^2.88.2",
+    "requests": "^0.3.0",
+    "superagent": "^5.3.1",
+    "tstest": "^0.4.10"
+  },
+  "devDependencies": {
+    "ts-node": "^8.10.2",
+    "typescript": "^3.9.7"
+  },
+  "scripts": {
+    "test": "blue-tape -r ts-node/register \"src/**/*.spec.ts\" \"src/*.spec.ts\" \"tests/*.spec.ts\" \"tests/**/*.spec.ts\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wj-Mcat/qna-maker-batch-test.git"
+  },
+  "keywords": [
+    "qna-maker-for-wechaty"
+  ],
+  "author": "wj-Mcat",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wj-Mcat/qna-maker-batch-test/issues"
+  },
+  "homepage": "https://github.com/wj-Mcat/qna-maker-batch-test#readme"
+}
