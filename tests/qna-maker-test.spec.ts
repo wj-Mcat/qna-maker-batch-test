@@ -13,13 +13,15 @@ let agentPromise = superagent.
 
 test('qna-maker ', async t => {
     // load test_data
-    let test_data = [{"question": "python 怎么运行不起来", "qna_id": 77}]
-    test_data.forEach(item => {
-        agentPromise.send({question: item['question']}).then(res => {
-            let answers = res.body.answers
-            // make sure the specific answer in response
-            let qna_ids = answers.filter(answer => answer['id'] == item['qna_id'])
-            t.assert(qna_ids.length, 1)
-        }).catch(console.error)
-    });
+    let test_data = [
+        {"question": "python 怎么运行不起来", "qna_id": 77}, {"question": "token如何申请", "qna_id": 43}]
+
+    for (let index = 0; index < test_data.length; index++) {
+        const item = test_data[index];
+        let res = await agentPromise.send({question: item['question']})
+        let answers = res.body.answers
+        // make sure the specific answer in response
+        console.log(item)
+        console.log(answers)    
+    }
 })
