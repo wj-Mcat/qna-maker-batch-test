@@ -4,7 +4,7 @@
   "description": "simple qna-maker-batch-test",
   "main": "index.js",
   "dependencies": {
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "tstest": "^0.4.10"
   },
   "devDependencies": {
